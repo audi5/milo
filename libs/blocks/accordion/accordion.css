@@ -300,3 +300,19 @@ div.editorial video {
     max-width: 100%;
   }
 }
+
+:root:has(meta[name="theme"][content="ff-doodlebug"]) {
+  .accordion .descr-term button {
+    border-radius: 16px;
+    background: #F0F0F7;
+    border: 1px solid #fff;
+  }
+
+  .descr-list.accordion {
+    border-bottom: none;
+  }
+
+  .accordion .descr-term button[aria-expanded="true"]::before {
+    content: none;
+  }
+}
