@@ -938,14 +938,15 @@ html[dir="rtl"] .carousel .move-indicators {
     transform: translateX(calc(-1 * var(--tablet-gap)));
   }
 
-  /* .carousel.disable-nav.tablet-hinting:has(.carousel-slide:first-child.active) .carousel-previous,
-  .carousel.disable-nav.tablet-hinting:has(.carousel-slide:last-child.active) .carousel-next {
+  .carousel.tablet-hinting:has(.carousel-slide:first-child.active) .carousel-previous,
+  .carousel.tablet-hinting:has(.carousel-slide:nth-last-child(2).active) .carousel-next {
     pointer-events: none;
+    opacity: 0.4;
   }
 
-  .carousel.disable-nav.tablet-hinting:has(.carousel-slide:first-child.active) .carousel-slide:last-child {
+  .carousel.tablet-hinting:has(.carousel-slide:nth-last-child(2).active) .carousel-slide:first-child {
     visibility: hidden;
-  } */
+  }
 
   .carousel.disable-nav.tablet-hinting .carousel-slides {
     left: calc(-1 * var(--tablet-card-width) - var(--tablet-margin));
