@@ -439,128 +439,65 @@
 }
 
 :root:has(meta[name="theme"][content="doodlebug"]) {
-    .editorial-card .media-area {
-    position: relative;
-    border-radius: 12px;
+  .editorial-card.l-shadow {
+    box-shadow: 0 5px 20px 10px #0000000F;
+  }
+  
+  .editorial-card.s-padding-media .media-area > div {
+    padding:var(--spacing-xxs);
   }
 
-  .editorial-card .media-area::after {
-    position: absolute;
-    content: '';
-    inset: 0;
-    border: 1px solid rgba(255 255 255 / 30%);
-    border-radius: 12px;
-    pointer-events: none;
+  .editorial-card.s-padding-media.m-rounded-corners-image  .media-area > div img {
+    border-radius: var(--m-rounded-corners);
   }
 
-  .two-up .editorial-card .media-area :is(img, video),
-  .carousel.show-2.ups-desktop .editorial-card .media-area :is(img, video),
   .three-up .editorial-card .media-area :is(img, video) {
     height: auto;
     max-height: unset;
-  }
-
-  .two-up .editorial-card .media-area :is(img, video),
-  .carousel.show-2.ups-desktop .editorial-card .media-area :is(img, video) {
-    aspect-ratio: 3 / 2;
-  }
-
-  .three-up .editorial-card .media-area :is(img, video) {
-    aspect-ratio: 231 / 217;
-  }
-
-  .editorial-card .foreground,
-  .editorial-card .card-footer,
-  .editorial-card.no-bg.no-border .foreground,
-  .editorial-card.no-bg.no-border .card-footer {
-    padding: var(--spacing-xs) var(--spacing-xxs);
-  }
-
-  .section:not(.dark) .editorial-card:not(.dark) [class*="heading-"] {
-    color: var(--color-black);
-  }
-
-  .editorial-card [class*="heading-"] {
-    font-weight: 800;
-  }
-
-  @media (max-width: 599px) {
-    .editorial-card [class*="heading-m"] {
-      line-height: 1.05
-    }
-
-    .editorial-card [class*="body-l"] {
-      font-size: 16px;
-      line-height: 1.35
-    }
-  }
-
-  @media (min-width: 600px) {
-    .editorial-card [class*="heading-m"] {
-      line-height: 1.05
-    }
-  }
-
-  .section:not(.dark) .editorial-card:not(.dark) [class*="body-"] {
-    color: #5d5d5d;
-  }
-
-  @media (min-width: 900px) {
-    .two-up .editorial-card .media-area :is(img, video),
-    .carousel.show-2.ups-desktop .editorial-card .media-area :is(img, video) {
-      aspect-ratio: 706 / 490;
-    }
-
-    .three-up .editorial-card .media-area :is(img, video) {
-      aspect-ratio: 462 / 438;
-    }
-  }
-
-  @media (max-width: 1199px) {
-    .editorial-card:not(.section.carousel-slide > .editorial-card) {
-      padding: 8px;
-      border-radius: var(--l-rounded-corners);
-      box-shadow: 0 5px 20px 10px rgba(0 0 0 / 6%);
-    }
+    aspect-ratio: 284 / 269;
   }
 
   @media (min-width: 1200px) {
-
-    .editorial-card.desktop-border:not(.section.carousel-slide > .editorial-card) {
-      padding: 8px;
-      border-radius: var(--l-rounded-corners);
-      box-shadow: 0 5px 20px 10px rgba(0 0 0 / 6%);
+    .section.show-2-desktop {
+      grid-template-columns: repeat(2, minmax(0, 823px));
+      max-width: 100%;
+      margin: 0 6.51%;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
     }
 
-    .editorial-card.desktop-border .foreground{
-      padding: var(--spacing-xs) var(--spacing-xxs)
+    .show-2-desktop .editorial-card .media-area :is(img, video) {
+      height: auto;
+      max-height: unset;
+      aspect-ratio: 823 / 490;
+    }
+    
+    .show-2-desktop .editorial-card {
+      background: none !important;
+      box-shadow: none;
     }
 
-    .editorial-card .foreground,
-    .editorial-card.no-bg.no-border .foreground{
-      padding: var(--spacing-s) var(--spacing-s) 12px;
+    .show-2-desktop .editorial-card .media-area {
+      position: relative;
     }
 
-    .editorial-card .card-footer,
-    .editorial-card.no-bg.no-border .card-footer {
-      padding: 12px var(--spacing-s) var(--spacing-s);
-    }
-
-    .editorial-card .media-area,
-    .editorial-card .media-area::after {
-      border-radius: 20px;
-    }
-
-    .editorial-card .media-area::after {
+    .show-2-desktop .editorial-card .media-area::after {
+      position: absolute;
+      content: '';
+      inset: 0;
+      border: 1px solid rgba(255 255 255 / 30%);
+      pointer-events: none;
       border-width: 3px;
     }
 
-    .editorial-card [class*="body-l"] {
-      line-height: 26px;
+    .show-2-desktop .editorial-card .media-area,
+    .show-2-desktop .editorial-card .media-area::after {
+      border-radius: 20px;
     }
-  }
-
-  @media (min-width: 1480px) {
-    --grid-container-width: 1440px;
+    
+    .show-2-desktop .editorial-card.s-padding-media .media-area > div {
+      padding: 0;
+    }
   }
 }
