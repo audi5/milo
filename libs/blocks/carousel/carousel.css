@@ -910,6 +910,27 @@ html[dir="rtl"] .carousel .move-indicators {
     --tablet-margin: 2rem;
   }
 
+  .carousel.tablet-hinting .carousel-button-container {
+    background: none;
+    min-width: 100px;
+    gap: 6px;
+  }
+
+  .carousel.tablet-hinting .carousel-button-container .carousel-controls {
+    display: none;
+  }
+
+  .carousel.tablet-hinting .carousel-button-container .carousel-button{
+    width: 40px;
+    height: 40px;
+    background-color: #242424;
+  }
+
+  .carousel.tablet-hinting .carousel-previous path,
+  .carousel.tablet-hinting .carousel-next path {
+    fill: #ffffff;
+  }
+
   .carousel.container.tablet-hinting {
     width: 100%;
   }
@@ -941,7 +962,12 @@ html[dir="rtl"] .carousel .move-indicators {
   .carousel.tablet-hinting:has(.carousel-slide:first-child.active) .carousel-previous,
   .carousel.tablet-hinting:has(.carousel-slide:nth-last-child(2).active) .carousel-next {
     pointer-events: none;
-    opacity: 0.4;
+    background-color: rgba(177, 177, 177, 0.20);
+  }
+
+  .carousel.tablet-hinting:has(.carousel-slide:first-child.active) .carousel-previous path,
+  .carousel.tablet-hinting:has(.carousel-slide:nth-last-child(2).active) .carousel-next path{
+    fill: #B1B1B1;
   }
 
   .carousel.tablet-hinting:has(.carousel-slide:nth-last-child(2).active) .carousel-slide:first-child {
