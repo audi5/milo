@@ -451,7 +451,9 @@
     border-radius: var(--m-rounded-corners);
   }
 
-  .three-up .editorial-card .media-area :is(img, video) {
+  .three-up .editorial-card .media-area :is(img, video),
+  .four-up .editorial-card .media-area :is(img, video),
+  .two-up .editorial-card .media-area :is(img, video) {
     height: auto;
     max-height: unset;
     aspect-ratio: 284 / 269;
