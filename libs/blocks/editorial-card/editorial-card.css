@@ -438,7 +438,7 @@
   }
 }
 
-:root:has(meta[name="theme"][content="ff-doodlebug"]) {
+:root:has(meta[name="theme"][content="doodlebug"]) {
     .editorial-card .media-area {
     position: relative;
     border-radius: 12px;

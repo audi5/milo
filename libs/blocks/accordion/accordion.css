@@ -301,7 +301,7 @@ div.editorial video {
   }
 }
 
-:root:has(meta[name="theme"][content="ff-doodlebug"]) {
+:root:has(meta[name="theme"][content="doodlebug"]) {
   .accordion .descr-term button {
     border-radius: 16px;
     background: #F0F0F7;

@@ -1362,7 +1362,7 @@
   }
 }
 
-:root:has(meta[name="theme"][content="ff-doodlebug"]) {
+:root:has(meta[name="theme"][content="doodlebug"]) {
   .aside .foreground.container {
     align-items: center;
     gap: 165px;
