@@ -192,6 +192,14 @@ function addIframeKeydownListener(iframe, dialog) {
   }
 }
 
+function safeQuerySelector(selector) {
+  try {
+    return document.querySelector(selector);
+  } catch (e) {
+    return null;
+  }
+}
+
 export async function getModal(details, custom) {
   if (!((details?.path && details?.id) || custom)) return null;
   const { id, deepLink } = details || custom;
@@ -387,14 +395,6 @@ export default async function init(el) {
   const details = await findDetails(window.location.hash, el);
   details.deepLink = true;
   return details ? getModal(details) : null;
-}
-
-function safeQuerySelector(selector) {
-  try {
-    return document.querySelector(selector);
-  } catch (e) {
-    return null;
-  }
 }
 
 document.addEventListener('click', async (e) => {
