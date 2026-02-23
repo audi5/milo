@@ -30,7 +30,6 @@ function getLocale(loc) {
 }
 
 async function decorateQuickLink(a, hasConsent, isNewTab) {
-  console.log('--------------------------------');
   const { locale } = getConfig();
   let ecid = null;
   const urlObj = new URL(a.href, window.location.origin);
@@ -48,9 +47,6 @@ async function decorateQuickLink(a, hasConsent, isNewTab) {
   const blockName = a.closest('[data-block-status="loaded"]')?.classList[0];
   if (blockName) urlObj.searchParams.append('~placement', blockName);
   a.href = urlObj.href;
-  console.log('--------------------------------');
-  console.log(isNewTab, a.getAttribute('target'));
-  console.log('--------------------------------');
   if (isNewTab || a.getAttribute('target') === '_blank') window.open(a.href, '_blank', 'noopener');
   else window.location.href = a.href;
 }
